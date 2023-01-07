@@ -19,8 +19,14 @@ add to maven (remove old db dependency and add new reactive)
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-webflux</artifactId>
 </dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-rsocket</artifactId>
+</dependency>
 ```
 db=mongo\
 sudo systemctl status mongo
 
 4.
+ready, but we need testing with console by httpie (<code>snap install httpie</code>(for any os))\
+testing command is <code>http -S :8080/acstream</code>
