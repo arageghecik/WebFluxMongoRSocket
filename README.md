@@ -30,3 +30,6 @@ sudo systemctl status mongo
 4.
 ready, but we need testing with console by httpie (<code>snap install httpie</code>(for any os))\
 testing command is <code>http -S :8080/acstream</code>
+
+5.
+for this version we don't have socket for communication frontend to backend like a wsocket version project
