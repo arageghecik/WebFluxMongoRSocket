@@ -1,4 +1,14 @@
-# reactive
+# reactive (chapter8-9)
+get data from PlaneFinderWithWebFluxR2DbcRsocket, it have two endpoints
+```java
+    @GetMapping("/aircraft")
+    public Flux<Aircraft> getCurrentAircraft()
+    
+    and
+    
+    @MessageMapping("acstream")
+    public Flux<Aircraft> getCurrentACStream()
+```
 
 1.
 CrudRepository to ReactiveCrudRepository
@@ -24,6 +34,14 @@ add to maven (remove old db dependency and add new reactive)
     <artifactId>spring-boot-starter-rsocket</artifactId>
 </dependency>
 ```
+embed mongo for test dosen't work corectly, it can read but can't save
+```xml
+ <dependency>
+      <groupId>de.flapdoodle.embed</groupId>
+      <artifactId>de.flapdoodle.embed.mongo</artifactId>
+      <scope>test</scope>
+ </dependency>
+```
 db=mongo\
 sudo systemctl status mongo
 
@@ -37,3 +55,8 @@ for this version we don't have socket for communication frontend to backend like
 6. 
 this app by  "...withoutRSocket" branch can get data from any app with  localhost:7635/aircraft endpoint\ 
 but for RSocket branch we need get data from "planeFinder_with_WebFlux_R2DBC_Rsocket" app, they communicate with /acstream socket endpoint(port find yourself)
+
+7.
+it have tast part
+PositionControllerTest work correct
+AircraftRepositoryTest dosen't work  correct
