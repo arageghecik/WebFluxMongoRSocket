@@ -4,7 +4,7 @@ get data from PlaneFinderWithWebFluxR2DbcRsocket, it have two endpoints
     @GetMapping("/aircraft")
     public Flux<Aircraft> getCurrentAircraft()
     
-    and
+    and for reactive socket
     
     @MessageMapping("acstream")
     public Flux<Aircraft> getCurrentACStream()
