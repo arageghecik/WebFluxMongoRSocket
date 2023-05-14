@@ -43,7 +43,7 @@ embed mongo for test dosen't work corectly, it can read but can't save
  </dependency>
 ```
 db=mongo\
-sudo systemctl status mongo
+sudo systemctl status mongod
 
 4.
 ready, but we need testing with console by httpie (<code>snap install httpie</code>(for any os))\
